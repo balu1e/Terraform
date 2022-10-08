@@ -7,9 +7,9 @@ Param(
 $ErrorActionPreference = "Stop"
 
 # Restore and build projects
-#& dotnet restore
-#& dotnet build .\src\PartsUnlimitedWebsite --configuration $BuildConfiguration
-#& dotnet build .\test\PartsUnlimited.UnitTests --configuration $BuildConfiguration
+& dotnet restore
+& dotnet build .\src\PartsUnlimitedWebsite --configuration $BuildConfiguration
+& dotnet build .\test\PartsUnlimited.UnitTests --configuration $BuildConfiguration
 
 # Run tests
 & dotnet test .\test\PartsUnlimited.UnitTests -xml testresults.xml
